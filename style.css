@@ -361,11 +361,19 @@ h1 {
     background-position: center;
     background-size: cover;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Testimonial::before { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    content: "";
+    display: block;
     background: linear-gradient(180deg, #131323 0%, rgba(87, 1, 1, 0.721977) 100%);
     background-blend-mode: overlay;
     opacity: 0.56;
 }
-
 
 #right-arr, #left-arr {
     z-index: 1;
@@ -381,10 +389,13 @@ h1 {
     transition: 0.4 ease;
 }
 
-#right-arr:hover,#left-arr:hover {
-    box-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
+#left-arr:hover {
+    left: -10px;
 }
 
+#right-arr:hover {
+    right: -10px;
+}
 
 
 #right-arr{
@@ -401,16 +412,10 @@ h1 {
     left: 0%;
 }
 
-.Testimonial::after { 
-    z-index: 1;
-    content: "";
-    position: fixed;
-    background: linear-gradient(180deg, #131323 0%, rgba(87, 1, 1, 0.721977) 100%);
-    background-blend-mode: overlay;
-    opacity: 0.56;
-}
 
 .testi-title{
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -418,7 +423,6 @@ h1 {
     font-weight: 500;
     font-size: 26px;
     line-height: 47px;
-    text-align: center;
     letter-spacing: 0.234586px;
     color: #FFFFFF;
     text-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
@@ -428,6 +432,8 @@ h1 {
 }
 
 blockquote{
+    position: relative;
+    z-index: 1;
     color: White;
     max-width: 50%;
     text-align: center;
@@ -435,6 +441,8 @@ blockquote{
 }
 
 .icon-star{
+    position: relative;
+    z-index: 1;
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -481,6 +489,12 @@ blockquote{
     line-height: 33px;
     letter-spacing: 0.649624px;
     color: #050505;
+    transition: ease-out 0.4s;
+}
+
+.btn-3:hover{
+    left: -1231x;
+    box-shadow: 3px 0;
 }
 
 /* ******************** FOOTER ******************** */
